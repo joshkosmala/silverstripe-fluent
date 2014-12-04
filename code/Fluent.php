@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Bootstrapping and configuration object for Fluet localisation
+ * Bootstrapping and configuration object for Fluent localisation
  *
  * @package fluent
  * @author Damian Mooyman <damian.mooyman@gmail.com>
