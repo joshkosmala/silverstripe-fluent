@@ -1,9 +1,8 @@
 <% if $Locales %>
 	<div class="locale">
 			<nav class="primary">
-				<ul>
-					<li><% loop $Locales.Limit(1) %><% if $HasTranslation %><a href="$Link.ATT" class="localeSelect">$LanguageNative</a><% end_if %><% end_loop %>
-					<ul>
+				<% with $LocaleInformation($CurrentLocale) %><% if $HasTranslation %><a href="$Link.ATT" class="localeSelect" aria-controls="localeList">$LanguageNative</a><% end_if %><% end_with %>
+					<ul id="localeList">
 						<% loop $Locales %>
 							<% if $HasTranslation %>
 								<li class="$LinkingMode">
@@ -12,8 +11,6 @@
 							<% end_if %>
 						<% end_loop %>
 					</ul>
-                    </li>
-                </ul>
 			</nav>
 	</div>
 <% end_if %>
